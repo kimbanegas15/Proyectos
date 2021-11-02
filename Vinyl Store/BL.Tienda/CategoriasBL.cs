@@ -8,29 +8,28 @@ using System.Threading.Tasks;
 
 namespace BL.Tienda
 {
-    public class TiposBL
+    public class CategoriasBL
     {
         
         Contexto _contexto;
-        public BindingList<Tipo> ListaTipos { get; set; }
+        public BindingList<Categoria> ListaCategorias { get; set; }
 
-        public TiposBL()
+        public CategoriasBL()
         {
             _contexto = new Contexto();
-            ListaTipos = new BindingList<Tipo>();
+            ListaCategorias = new BindingList<Categoria>();
         }
 
-        public BindingList<Tipo> ObtenerTipos()
+        public BindingList<Categoria> ObtenerCategorias()
         {
-            _contexto.Tipos.Load();
-            ListaTipos = _contexto.Tipos.Local.ToBindingList();
+            _contexto.Categorias.Load();
+            ListaCategorias = _contexto.Categorias.Local.ToBindingList();
 
-            return ListaTipos;
+            return ListaCategorias;
         }
-                        
     }
 
-    public class Tipo
+    public class Categoria
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }

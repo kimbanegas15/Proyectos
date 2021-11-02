@@ -37,7 +37,7 @@ namespace Win.Tienda
 
         private void mantenimiento2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formMantenimiento2 = new FormMantenimiento2();
+            var formMantenimiento2 = new FormClientes();
             formMantenimiento2.MdiParent = this;
             formMantenimiento2.Show();
         }

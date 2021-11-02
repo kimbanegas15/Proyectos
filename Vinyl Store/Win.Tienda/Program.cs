@@ -28,8 +28,5 @@ namespace Win.Tienda
 
             return ms.ToArray();
         }
-
-       
-        
     }
 }

@@ -9,14 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Win.Tienda
 {
     public partial class FormModelo : Form
     {
         ModeloBL _modelos;
-       
+        CategoriasBL _categorias;
+        TiposBL _tiposBL;
 
         public FormModelo()
         {
@@ -24,23 +24,29 @@ namespace Win.Tienda
 
             _modelos = new ModeloBL();
             listaModelosBindingSource.DataSource = _modelos.ObtenerModelos();
+
+            _categorias = new CategoriasBL();
+            listaCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
+
+            _tiposBL = new TiposBL();
+            listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
         }
 
         private void listaModelosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             listaModelosBindingSource.EndEdit();
-            var Modelo = (Modelo)listaModelosBindingSource.Current;
+            var modelo = (Modelo)listaModelosBindingSource.Current;
 
             if (fotoPictureBox.Image != null)
             {
-                Modelo.foto = Program.imageToByteArray(fotoPictureBox.Image);
+                modelo.Foto = Program.imageToByteArray(fotoPictureBox.Image);
             }
             else
-            {
-                Modelo.foto = null;
-            }
+                {
+                    modelo.Foto = null;
+                }
 
-            var resultado = _modelos.GuardarModelo(Modelo);
+            var resultado = _modelos.GuardarModelo(modelo);
 
             if (resultado.Exitoso == true)
             {
@@ -53,21 +59,6 @@ namespace Win.Tienda
                 {
                 MessageBox.Show(resultado.Mensaje);
                 }
-        }
-
-        private byte[] imageToByteArray(object image)
-        {
-            throw new NotImplementedException();
-        }
-
-        private byte[] imageToByteArray(object image, object imageIn)
-        {
-            throw new NotImplementedException();
-        }
-
-        private byte[] imageToByteArray()
-        {
-            throw new NotImplementedException();
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
@@ -122,8 +113,8 @@ namespace Win.Tienda
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
-            DeshabilitarHabilitarBotones(true);
-            Eliminar(0);
+            _modelos.CancelarCambios();
+            DeshabilitarHabilitarBotones(true);            
         }
 
         private void idTextBox_TextChanged(object sender, EventArgs e)
@@ -143,10 +134,9 @@ namespace Win.Tienda
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var modelo = (Modelo)listaModelosBindingSource.Current;
 
-            var Modelo = (Modelo)listaModelosBindingSource.Current;
-
-            if (Modelo != null)
+            if (modelo != null)
             {
                 openFileDialog1.ShowDialog();
                 var archivo = openFileDialog1.FileName;
@@ -160,19 +150,15 @@ namespace Win.Tienda
                 }
             }
             else
-            {
-                MessageBox.Show("cree producto antes de asignar imagen");
-            }
-
-
+                {
+                    MessageBox.Show("Cree un producto antes de asignarle una imagen");
+                }
+            
         }
-
 
         private void button2_Click(object sender, EventArgs e)
         {
             fotoPictureBox.Image = null;
         }
-    
-
-}
+    }
 }

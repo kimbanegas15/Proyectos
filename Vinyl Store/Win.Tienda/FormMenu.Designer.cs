@@ -78,7 +78,7 @@
             // 
             this.mantenimiento2ToolStripMenuItem.Name = "mantenimiento2ToolStripMenuItem";
             this.mantenimiento2ToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.mantenimiento2ToolStripMenuItem.Text = "Mantenimiento2";
+            this.mantenimiento2ToolStripMenuItem.Text = "Clientes";
             this.mantenimiento2ToolStripMenuItem.Click += new System.EventHandler(this.mantenimiento2ToolStripMenuItem_Click);
             // 
             // mantenimiento3ToolStripMenuItem
