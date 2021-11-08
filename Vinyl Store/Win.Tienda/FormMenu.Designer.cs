@@ -32,7 +32,6 @@
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimiento1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimiento2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mantenimiento3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaccion1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,8 +60,7 @@
             // 
             this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mantenimiento1ToolStripMenuItem,
-            this.mantenimiento2ToolStripMenuItem,
-            this.mantenimiento3ToolStripMenuItem});
+            this.mantenimiento2ToolStripMenuItem});
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.mantenimientoToolStripMenuItem.Text = "Producto";
@@ -70,23 +68,16 @@
             // mantenimiento1ToolStripMenuItem
             // 
             this.mantenimiento1ToolStripMenuItem.Name = "mantenimiento1ToolStripMenuItem";
-            this.mantenimiento1ToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.mantenimiento1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mantenimiento1ToolStripMenuItem.Text = "Modelo";
             this.mantenimiento1ToolStripMenuItem.Click += new System.EventHandler(this.mantenimiento1ToolStripMenuItem_Click);
             // 
             // mantenimiento2ToolStripMenuItem
             // 
             this.mantenimiento2ToolStripMenuItem.Name = "mantenimiento2ToolStripMenuItem";
-            this.mantenimiento2ToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.mantenimiento2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mantenimiento2ToolStripMenuItem.Text = "Clientes";
             this.mantenimiento2ToolStripMenuItem.Click += new System.EventHandler(this.mantenimiento2ToolStripMenuItem_Click);
-            // 
-            // mantenimiento3ToolStripMenuItem
-            // 
-            this.mantenimiento3ToolStripMenuItem.Name = "mantenimiento3ToolStripMenuItem";
-            this.mantenimiento3ToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.mantenimiento3ToolStripMenuItem.Text = "Mantenimiento3";
-            this.mantenimiento3ToolStripMenuItem.Click += new System.EventHandler(this.mantenimiento3ToolStripMenuItem_Click);
             // 
             // transaccionesToolStripMenuItem
             // 
@@ -99,8 +90,8 @@
             // transaccion1ToolStripMenuItem
             // 
             this.transaccion1ToolStripMenuItem.Name = "transaccion1ToolStripMenuItem";
-            this.transaccion1ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.transaccion1ToolStripMenuItem.Text = "Transaccion1";
+            this.transaccion1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.transaccion1ToolStripMenuItem.Text = "Factura";
             this.transaccion1ToolStripMenuItem.Click += new System.EventHandler(this.transaccion1ToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
@@ -175,7 +166,6 @@
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimiento1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimiento2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mantenimiento3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transaccion1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;

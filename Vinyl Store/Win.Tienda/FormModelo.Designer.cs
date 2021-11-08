@@ -36,8 +36,8 @@
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label precioLabel;
             System.Windows.Forms.Label label1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormModelo));
             System.Windows.Forms.Label tipoIdLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormModelo));
             this.listaModelosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.listaModelosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -64,8 +64,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listaTiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaCategoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listaTiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
             activoLabel = new System.Windows.Forms.Label();
             artistaLabel = new System.Windows.Forms.Label();
@@ -79,8 +79,8 @@
             this.listaModelosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaModelosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // activoLabel
@@ -146,6 +146,15 @@
             label1.Size = new System.Drawing.Size(55, 13);
             label1.TabIndex = 17;
             label1.Text = "Categoria:";
+            // 
+            // tipoIdLabel
+            // 
+            tipoIdLabel.AutoSize = true;
+            tipoIdLabel.Location = new System.Drawing.Point(53, 140);
+            tipoIdLabel.Name = "tipoIdLabel";
+            tipoIdLabel.Size = new System.Drawing.Size(31, 13);
+            tipoIdLabel.TabIndex = 18;
+            tipoIdLabel.Text = "Tipo:";
             // 
             // listaModelosBindingNavigator
             // 
@@ -294,7 +303,7 @@
             this.activo.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaModelosBindingSource, "Activo", true));
             this.activo.Location = new System.Drawing.Point(125, 242);
             this.activo.Name = "activo";
-            this.activo.Size = new System.Drawing.Size(349, 24);
+            this.activo.Size = new System.Drawing.Size(20, 24);
             this.activo.TabIndex = 6;
             this.activo.UseVisualStyleBackColor = true;
             // 
@@ -329,7 +338,7 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(349, 20);
-            this.idTextBox.TabIndex = 1;
+            this.idTextBox.TabIndex = 100;
             this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged_1);
             // 
             // precioTextBox
@@ -389,22 +398,13 @@
             this.comboBox1.TabIndex = 18;
             this.comboBox1.ValueMember = "Id";
             // 
-            // listaTiposBindingSource
-            // 
-            this.listaTiposBindingSource.DataSource = typeof(BL.Tienda.Tipo);
-            // 
             // listaCategoriasBindingSource
             // 
             this.listaCategoriasBindingSource.DataSource = typeof(BL.Tienda.Categoria);
             // 
-            // tipoIdLabel
+            // listaTiposBindingSource
             // 
-            tipoIdLabel.AutoSize = true;
-            tipoIdLabel.Location = new System.Drawing.Point(53, 140);
-            tipoIdLabel.Name = "tipoIdLabel";
-            tipoIdLabel.Size = new System.Drawing.Size(31, 13);
-            tipoIdLabel.TabIndex = 18;
-            tipoIdLabel.Text = "Tipo:";
+            this.listaTiposBindingSource.DataSource = typeof(BL.Tienda.Tipo);
             // 
             // tipoIdComboBox
             // 
@@ -454,8 +454,8 @@
             this.listaModelosBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaModelosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

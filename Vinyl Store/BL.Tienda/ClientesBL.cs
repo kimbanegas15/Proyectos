@@ -75,12 +75,32 @@ namespace BL.Tienda
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
+            if (cliente == null)
+            {
+                resultado.Mensaje = "Agregue un cliente válido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
             if (string.IsNullOrEmpty(cliente.Nombre) == true)
             {
                 resultado.Mensaje = "Ingrese un nombre";
                 resultado.Exitoso = false;
             }
-            
+
+            if (string.IsNullOrEmpty(cliente.Telefono) == true)
+            {
+                resultado.Mensaje = "Ingrese un número de teléfono";
+                resultado.Exitoso = false;
+            }
+
+            if (string.IsNullOrEmpty(cliente.Direccion) == true)
+            {
+                resultado.Mensaje = "Ingrese una dirección";
+                resultado.Exitoso = false;
+            }
+
             return resultado;
         }
     }
@@ -89,6 +109,13 @@ namespace BL.Tienda
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+        public string Telefono { get; set; }
+        public string Direccion { get; set; }
         public bool Activo { get; set; }
+
+        public Cliente()
+        {
+            Activo = true;
+        }
     }
 }

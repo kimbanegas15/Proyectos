@@ -41,17 +41,10 @@ namespace Win.Tienda
             formMantenimiento2.MdiParent = this;
             formMantenimiento2.Show();
         }
-
-        private void mantenimiento3ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var formMantenimiento3 = new FormMantenimiento3();
-            formMantenimiento3.MdiParent = this;
-            formMantenimiento3.Show();
-        }
-
+                
         private void transaccion1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formTransaccion1 = new FormTransaccion1();
+            var formTransaccion1 = new FormFactura();
             formTransaccion1.MdiParent = this;
             formTransaccion1.Show();
         }

@@ -77,6 +77,14 @@ namespace BL.Tienda
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
+            if (modelo == null)
+            {
+                resultado.Mensaje = "Agregue un modelo válido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
             if (string.IsNullOrEmpty(modelo.Descripcion) == true)
             {
                 resultado.Mensaje = "Ingrese una descripción";

@@ -74,12 +74,6 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMantenimiento3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMantenimiento3.Designer.cs">
-      <DependentUpon>FormMantenimiento3.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,11 +104,11 @@
     <Compile Include="FormReporte3.Designer.cs">
       <DependentUpon>FormReporte3.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTransaccion1.cs">
+    <Compile Include="FormFactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTransaccion1.Designer.cs">
-      <DependentUpon>FormTransaccion1.cs</DependentUpon>
+    <Compile Include="FormFactura.Designer.cs">
+      <DependentUpon>FormFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -123,9 +117,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMantenimiento3.resx">
-      <DependentUpon>FormMantenimiento3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
@@ -142,8 +133,8 @@
     <EmbeddedResource Include="FormReporte3.resx">
       <DependentUpon>FormReporte3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTransaccion1.resx">
-      <DependentUpon>FormTransaccion1.cs</DependentUpon>
+    <EmbeddedResource Include="FormFactura.resx">
+      <DependentUpon>FormFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -159,6 +150,7 @@
     <None Include="Properties\DataSources\BL.Tienda.CategoriasBL.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.ClientesBL.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.Contexto.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.FacturaBL.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.Modelo.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.ModeloBL.datasource" />
     <None Include="Properties\DataSources\BL.Tienda.Resultado.datasource" />

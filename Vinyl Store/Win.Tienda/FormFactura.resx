@@ -120,23 +120,29 @@
   <metadata name="activoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="direccionLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clienteIdLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="fechaLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="idLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="nombreLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="impuestoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="telefonoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="subtotalLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="listaClientesBindingNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>212, 17</value>
+  <metadata name="totalLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <metadata name="listaClientesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="listaFacturasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="listaFacturasBindingNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>214, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bindingNavigatorMoveFirstItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -203,7 +209,7 @@
         RpBSo3HrM0G6Uq7pl2zvhvNDBcClE8YH4HDv2/A/SKV6BYojAxyEJtLJAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="listaClientesBindingNavigatorSaveItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="listaFacturasBindingNavigatorSaveItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAABMSURBVDhPY6AK+Pbt239SMVQrBIAFgufA8Yf3H+EYWQxE
@@ -226,4 +232,13 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="listaClientesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>428, 17</value>
+  </metadata>
+  <metadata name="listaModelosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>623, 17</value>
+  </metadata>
+  <metadata name="facturaDetalleBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
 </root>
