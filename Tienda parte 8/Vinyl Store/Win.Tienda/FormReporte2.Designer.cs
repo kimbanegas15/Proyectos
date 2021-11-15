@@ -50,7 +50,7 @@
             this.Controls.Add(this.crystalReportViewer1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormReporte2";
-            this.Text = "Reporte de productos";
+            this.Text = "Reporte de Producto";
             this.ResumeLayout(false);
 
         }
