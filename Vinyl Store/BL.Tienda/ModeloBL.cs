@@ -29,6 +29,13 @@ namespace BL.Tienda
             return ListaModelos;
         }
 
+        public BindingList<Modelo> ObtenerModelos(string buscar)
+        {
+            var resultado = _contexto.Modelos.Where(r => r.Descripcion.ToLower().Contains(buscar.ToLower()));
+
+            return new BindingList<Modelo>(resultado.ToList());
+        }
+
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())

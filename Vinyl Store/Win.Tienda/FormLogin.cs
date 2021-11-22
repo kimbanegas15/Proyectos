@@ -39,6 +39,11 @@ namespace Win.Tienda
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Login();              
+        }
+
+        private void Login()
+        {
             string usuario;
             string contrasena;
 
@@ -52,19 +57,37 @@ namespace Win.Tienda
             var resultado = _seguridad.Autorizar(usuario, contrasena);
 
 
-            if (resultado == true)
+            if (resultado != null)
             {
+                Utilidades.UsuarioActual = resultado;
+
                 this.Close();
             }
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrecta");
-            }            
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter && textBox1.Text != "")
+            {
+                textBox2.Focus();
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter && textBox1.Text != "" && textBox2.Text != "")
+            {
+                Login();
+            }
         }
     }
 }

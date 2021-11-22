@@ -19,6 +19,17 @@ namespace Win.Tienda
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form[] forms = Application.OpenForms.Cast<Form>().ToArray();
+
+            foreach (Form f in forms)
+            {
+                if(f.Name != "FormMenu")
+                {
+                    f.Close();
+
+                }
+            }
+
             Login();
         }
 
@@ -26,53 +37,75 @@ namespace Win.Tienda
         {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
+
+            toolStripStatusLabel1.Text = "Usuario: " + Utilidades.UsuarioActual.Nombre;
+
+            if (Utilidades.UsuarioActual.EsAdmin)
+            {
+                usuariosToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                usuariosToolStripMenuItem.Visible = false;
+                mantenimiento1ToolStripMenuItem.Visible = Utilidades.UsuarioActual.PuedeAccederModelos;
+                mantenimiento2ToolStripMenuItem.Visible = Utilidades.UsuarioActual.PuedeAccederClientes;
+                transaccion1ToolStripMenuItem.Visible = Utilidades.UsuarioActual.PuedeAccederFacturas;
+                reportesToolStripMenuItem.Visible = Utilidades.UsuarioActual.PuedeAccederReportes;
+            }
         }
 
         private void mantenimiento1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formMantenimiento1 = new FormModelo();
-            formMantenimiento1.MdiParent = this;
-            formMantenimiento1.Show();
+            var formModelo = new FormModelo();
+            formModelo.MdiParent = this;
+            formModelo.Show();
         }
 
         private void mantenimiento2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formMantenimiento2 = new FormClientes();
-            formMantenimiento2.MdiParent = this;
-            formMantenimiento2.Show();
+            var formClientes = new FormClientes();
+            formClientes.MdiParent = this;
+            formClientes.Show();
         }
                 
         private void transaccion1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formTransaccion1 = new FormFactura();
-            formTransaccion1.MdiParent = this;
-            formTransaccion1.Show();
+            var formFactura = new FormFactura();
+            formFactura.MdiParent = this;
+            formFactura.Show();
         }
 
         private void reporte1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formReporte1 = new FormReporte1();
-            formReporte1.MdiParent = this;
-            formReporte1.Show();
+            var formReporteModelos = new FormReporteModelos();
+            formReporteModelos.MdiParent = this;
+            formReporteModelos.Show();
         }
 
         private void reporte2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formReporte2 = new FormReporte2();
-            formReporte2.MdiParent = this;
-            formReporte2.Show();
+            var formReporteClientes = new FormReporteClientes();
+            formReporteClientes.MdiParent = this;
+            formReporteClientes.Show();
         }
 
         private void reporte3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formReporte3 = new FormReporte3();
-            formReporte3.MdiParent = this;
-            formReporte3.Show();
+            var formReporteFacturas = new FormReporteFacturas();
+            formReporteFacturas.MdiParent = this;
+            formReporteFacturas.Show();
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
             Login();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formUsuarios = new FormUsuarios();
+            formUsuarios.MdiParent = this;
+            formUsuarios.Show();
         }
     }
 }

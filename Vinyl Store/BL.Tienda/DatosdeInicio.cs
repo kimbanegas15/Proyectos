@@ -14,14 +14,17 @@ namespace BL.Tienda
             var usuarioAdmin1 = new Usuario();
             usuarioAdmin1.Nombre = "admin";
             usuarioAdmin1.Contrasena = "123";
+            usuarioAdmin1.EsAdmin = true;
 
             contexto.Usuarios.Add(usuarioAdmin1);
 
-            var usuarioAdmin2 = new Usuario();
-            usuarioAdmin2.Nombre = "user";
-            usuarioAdmin2.Contrasena = "456";
+            var usuarioGerente = new Usuario();
+            usuarioGerente.Nombre = "gerente";
+            usuarioGerente.Contrasena = "456";
+            usuarioGerente.PuedeAccederFacturas = false;
+            usuarioGerente.PuedeAccederReportes = true;
 
-            contexto.Usuarios.Add(usuarioAdmin2);
+            contexto.Usuarios.Add(usuarioGerente);
 
             var categoria1 = new Categoria();
             categoria1.Descripcion = "Rock";
